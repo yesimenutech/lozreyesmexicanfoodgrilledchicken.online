@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loz Reyes Mexican Food & Grilled Chicken | Houston, TX</title>
+  <meta name="description" content="Auténtica carne asada y pollos asados al carbón en Houston, TX. Disfruta de la verdadera tradición mexicana en Loz Reyes Mexican Food & Grilled Chicken.">
+  <link rel="canonical" href="https://lozreyesmexicanfoodgrilledchicken.online/">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Loz Reyes Mexican Food & Grilled Chicken">
+  <meta property="og:description" content="Auténtica carne asada y pollos asados al carbón en Houston, TX.">
+  <meta property="og:image" content="https://lozreyesmexicanfoodgrilledchicken.online/img/LosReyesMexFoodLOGO.png">
+  <meta property="og:url" content="https://lozreyesmexicanfoodgrilledchicken.online/">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/LosReyesMexFoodLOGO_Favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Rye&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream:#faf5e9;
+      --paper:#fffdf7;
+      --ink:#28251f;
+      --muted:#726c60;
+      --red:#c9362d;
+      --red-dark:#a92721;
+      --yellow:#f4c842;
+      --green:#287447;
+      --line:#e8dfcc;
+      --serif:"Fraunces",Georgia,serif;
+      --sans:"DM Sans",sans-serif;
+      --display:"Rye",Georgia,serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65}
+    body.menu-open{overflow:hidden}
+    a{color:inherit;text-decoration:none}
+    button,input,textarea,select{font:inherit}
+    button{cursor:pointer}
+    img{display:block;max-width:100%}
+    .container{width:min(1180px,calc(100% - 48px));margin:auto}
+    .eyebrow{font-size:11px;font-weight:800;letter-spacing:.19em;text-transform:uppercase;color:var(--red)}
+    .section-title{font-family:var(--serif);font-size:clamp(37px,5vw,66px);line-height:1.05;letter-spacing:-.045em;margin:12px 0 18px;font-weight:700}
+    .section-copy{color:var(--muted);max-width:550px}
+    .topline{height:6px;background:linear-gradient(90deg,var(--green) 0 33.33%,var(--paper) 33.33% 66.66%,var(--red) 66.66%)}
+    .header{height:88px;display:flex;align-items:center;position:sticky;top:0;z-index:20;background:rgba(250,245,233,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(40,37,31,.09)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:210px}
+    .brand img{width:66px;height:66px;object-fit:contain}
+    .brand-name{font-family:var(--display);font-size:14px;line-height:1.35;max-width:165px}
+    .brand-name span{display:block;color:var(--red);font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+    .nav-links{display:flex;align-items:center;gap:28px;font-size:12px;font-weight:700}
+    .nav-links a{transition:color .2s}
+    .nav-links a:hover{color:var(--red)}
+    .nav-actions{display:flex;align-items:center;gap:12px}
+    .language{border:1px solid var(--line);background:transparent;border-radius:30px;padding:9px 13px;font-size:11px;font-weight:800}
+    .language:hover{border-color:var(--red);color:var(--red)}
+    .order-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--red);color:white;border:0;padding:14px 20px;border-radius:4px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;transition:background .2s,transform .2s}
+    .order-button:hover{background:var(--red-dark);transform:translateY(-2px)}
+    .order-button svg{width:16px;height:16px}
+    .mobile-toggle{display:none;background:none;border:0;padding:8px}
+    .mobile-toggle svg{width:26px;height:26px}
+    
+    .hero{position:relative;min-height:660px;display:grid;align-items:center;overflow:hidden;background:#f3e7c9}
+    .hero-photo{position:absolute;inset:0 0 0 43%;background:url("img/dish.jpg") center/cover no-repeat}
+    .hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#f3e7c9 0%,rgba(243,231,201,.4) 20%,transparent 55%),linear-gradient(0deg,rgba(35,24,12,.16),transparent 45%)}
+    .hero-inner{position:relative;z-index:1;padding:80px 0 95px}
+    .hero-content{max-width:600px}
+    .hero-kicker{display:flex;align-items:center;gap:12px;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--green)}
+    .hero-kicker:before{content:"";width:35px;height:2px;background:var(--green)}
+    .hero h1{font-family:var(--display);font-weight:400;font-size:clamp(43px,6vw,82px);line-height:1.05;letter-spacing:-.045em;margin:24px 0 20px;max-width:620px}
+    .hero h1 em{font-style:normal;color:var(--red)}
+    .hero-description{font-size:16px;color:#554d40;max-width:410px;margin:0 0 30px}
+    .hero-meta{display:flex;gap:24px;align-items:center;margin-top:34px;font-size:11px;font-weight:700;color:#5d5549}
+    .hero-meta span{display:flex;align-items:center;gap:8px}
+    .hero-meta svg{width:17px;height:17px;color:var(--red)}
+    .hero-gallo{position:absolute;right:5%;bottom:-34px;width:220px;max-height:260px;object-fit:contain;z-index:2;filter:drop-shadow(0 10px 7px #3a271c18);pointer-events:none;animation:galloBounce 3s ease-in-out infinite}
+    @keyframes galloBounce {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(3deg); }
+    }
+    .hero-stamp{position:absolute;right:38%;bottom:60px;width:110px;height:110px;border:1px solid #fff9;border-radius:50%;display:grid;place-items:center;text-align:center;background:var(--yellow);font-family:var(--display);font-size:12px;line-height:1.35;transform:rotate(-12deg);z-index:3}
+    .hero-stamp small{display:block;font-family:var(--sans);font-size:8px;letter-spacing:.12em;font-weight:800}
+
+    .marquee{background:var(--green);color:#fff;padding:13px 0;overflow:hidden}
+    .marquee-track{display:flex;justify-content:center;gap:34px;white-space:nowrap;font-family:var(--display);font-size:12px;letter-spacing:.08em}
+    .marquee-track span{display:flex;align-items:center;gap:34px}
+    .marquee-track i{font-style:normal;color:var(--yellow);font-size:17px}
+
+    .intro{padding:115px 0 120px}
+    .intro-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:90px;align-items:center}
+    .intro-visual{position:relative;padding:0 40px 40px 0}
+    .intro-visual img{width:100%;height:480px;object-fit:cover;border-radius:2px}
+    .intro-visual:after{content:"";position:absolute;z-index:-1;right:0;bottom:0;width:75%;height:65%;background:var(--yellow)}
+    .intro-tag{position:absolute;left:-20px;bottom:60px;background:var(--red);color:white;padding:15px 18px;font-family:var(--display);font-size:12px;transform:rotate(-4deg);box-shadow:0 8px 20px rgba(0,0,0,0.15)}
+    .intro-copy{padding:25px 0}
+    .intro-copy .section-title{max-width:520px}
+    .intro-copy p{color:var(--muted);max-width:520px}
+    .intro-signature{margin-top:30px;display:flex;align-items:center;gap:12px;color:var(--green);font-weight:800;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+    .intro-signature:before{content:"";width:35px;height:2px;background:var(--green)}
+
+    .menu-section{padding:110px 0 120px;background:var(--paper);position:relative;overflow:hidden}
+    .menu-section:before{content:"";position:absolute;left:-100px;top:80px;width:260px;height:260px;border:1px solid #e8dfcc;border-radius:50%;box-shadow:0 0 0 24px #fff0,0 0 0 25px #e8dfcc,0 0 0 50px #fff0,0 0 0 51px #e8dfcc;opacity:.55}
+    .menu-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px;position:relative}
+    .menu-head .section-title{margin-bottom:0}
+    .menu-note{font-size:11px;color:var(--muted);max-width:240px}
+    .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .dish-card{background:#fff;border:1px solid #eee7da;min-width:0;transition:transform .25s;overflow:hidden}
+    .dish-card:hover{transform:translateY(-5px)}
+    .dish-card img{width:100%;height:290px;object-fit:cover;background:#eee6d7}
+    .menu-footnote{font-size:11px;color:var(--muted);margin-top:26px}
+
+    .feature{background:var(--yellow);padding:85px 0;position:relative;overflow:hidden}
+    .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .feature-copy .eyebrow{color:#75421d}
+    .feature-copy h2{font-family:var(--display);font-size:clamp(34px,5vw,58px);font-weight:400;line-height:1.1;margin:14px 0 18px}
+    .feature-copy p{max-width:460px;color:#5d4d2b}
+    .feature-art{position:relative;min-height:340px}
+    .feature-art img{position:absolute;width:80%;height:340px;right:0;top:0;object-fit:cover;border:10px solid var(--cream)}
+    .feature-art:before{content:"";position:absolute;width:55%;height:75%;left:0;bottom:-15px;border:2px solid var(--red);transform:rotate(-7deg)}
+    .feature-label{position:absolute;left:0;top:32px;background:var(--green);color:#fff;padding:15px 20px;font-family:var(--display);font-size:12px;transform:rotate(-5deg);z-index:2}
+
+    .gallery-section{padding:110px 0}
+    .gallery-head{text-align:center;margin-bottom:38px}
+    .gallery-head .section-copy{margin:0 auto}
+    .gallery-grid{display:grid;grid-template-columns:1.15fr .85fr .85fr;grid-template-rows:220px 220px;gap:14px}
+    .gallery-grid img{width:100%;height:100%;object-fit:cover}
+    .gallery-grid .gallery-tall{grid-row:span 2}
+    .gallery-grid .gallery-wide{grid-column:span 2}
+
+    .visit{background:#f0e8d8;padding:100px 0}
+    .visit-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:start}
+    .visit-info{padding:10px 0}
+    .visit-info .section-title{font-size:clamp(36px,4.4vw,58px)}
+    .info-block{display:grid;grid-template-columns:42px 1fr;gap:15px;padding:20px 0;border-bottom:1px solid #dcd1bd}
+    .info-icon{width:38px;height:38px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center}
+    .info-icon svg{width:18px;height:18px}
+    .info-block h3{font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin:0 0 5px}
+    .info-block p{margin:0;color:#655e52;font-size:13px}
+    .hours{display:grid;grid-template-columns:1fr auto;gap:5px 18px;font-size:12px;color:#655e52}
+    .hours strong{color:var(--ink);font-weight:700}
+    .hours .closed{color:var(--red);font-weight:800}
+    .map-frame{width:100%;height:470px;border:0;display:block;filter:saturate(.8)}
+    .map-wrap{position:relative;background:#ddd5c6;padding:10px}
+    .map-caption{background:var(--paper);padding:17px 20px;display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:12px}
+    .map-caption strong{font-family:var(--serif);font-size:16px}
+
+    .social-section{padding:75px 0;background:var(--red);color:#fff}
+    .social-inner{display:flex;align-items:center;justify-content:space-between;gap:35px}
+    .social-inner h2{font-family:var(--serif);font-size:clamp(26px,3vw,39px);margin:5px 0 0;line-height:1.15}
+    .social-inner .eyebrow{color:#ffdf89}
+    .social-links{display:flex;gap:10px;flex-wrap:wrap}
+    .social-link{width:52px;height:52px;border:1px solid #ffffff70;border-radius:50%;display:grid;place-items:center;transition:.2s}
+    .social-link:hover{background:#fff;color:var(--red);transform:translateY(-3px)}
+    .social-link svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8}
+
+    .footer{background:#292a21;color:#f9f3e6;padding:65px 0 25px}
+    .footer-grid{display:grid;grid-template-columns:1.3fr .8fr 1fr;gap:60px;padding-bottom:45px}
+    .footer-brand{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+    .footer-brand img{width:75px;height:75px;object-fit:contain;background:#fff;border-radius:50%;padding:4px}
+    .footer-brand strong{font-family:var(--display);font-weight:400;font-size:15px;line-height:1.4}
+    .footer p{font-size:12px;color:#c9c2b4;max-width:340px}
+    .footer h3{font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin:7px 0 18px;color:var(--yellow)}
+    .footer-links{display:grid;gap:10px;font-size:12px;color:#e1dacc}
+    .footer-links a:hover{color:var(--yellow)}
+    .footer-bottom{border-top:1px solid #ffffff24;padding-top:20px;display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:10px;color:#bdb7aa}
+    .footer-bottom a{color:#f9f3e6;text-decoration:underline;text-underline-offset:3px}
+    .footer-social{display:flex;gap:12px;margin-top:17px}
+    .footer-social a{font-size:11px;color:#f9f3e6}
+    .footer-social a:hover{color:var(--yellow)}
+
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+    .reveal.visible{opacity:1;transform:none}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+    @media(max-width:950px){
+      .nav-links{gap:16px}
+      .brand{min-width:unset}
+      .brand img{width:55px;height:55px}
+      .brand-name{font-size:12px}
+      .hero{min-height:600px}
+      .hero-photo{left:35%}
+      .hero-gallo{width:165px;right:2%}
+      .intro-grid{gap:45px}
+      .menu-grid{grid-template-columns:repeat(2,1fr)}
+      .feature-grid{gap:35px}
+      .visit-grid{gap:35px}
+    }
+    @media(max-width:740px){
+      .container{width:min(100% - 34px,560px)}
+      .header{height:74px}
+      .nav{gap:10px}
+      .brand img{width:48px;height:48px}
+      .brand-name{font-size:10px;max-width:125px}
+      .brand-name span{font-size:8px}
+      .mobile-toggle{display:block;margin-left:auto}
+      .nav-actions{gap:7px}
+      .nav-actions .order-button{display:none}
+      .language{padding:8px 10px}
+      .nav-links{display:none;position:absolute;top:74px;left:0;right:0;background:var(--cream);padding:22px 25px 28px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}
+      .nav-links.open{display:flex}
+      .nav-links a{padding:13px 0;border-bottom:1px solid var(--line);font-size:13px}
+      .hero{min-height:690px;align-items:start}
+      .hero-photo{inset:310px 0 0 0}
+      .hero-photo:after{background:linear-gradient(180deg,#f3e7c9 0%,rgba(243,231,201,.05) 38%,transparent 70%)}
+      .hero-inner{padding:45px 0 350px}
+      .hero-content{max-width:100%}
+      .hero h1{font-size:clamp(42px,12vw,66px);margin:17px 0}
+      .hero-description{font-size:14px;max-width:340px}
+      .hero-meta{margin-top:20px;gap:14px;flex-wrap:wrap;font-size:10px}
+      .hero-gallo{width:115px;bottom:0;right:3%}
+      .hero-stamp{width:82px;height:82px;right:auto;left:20px;bottom:24px;font-size:9px}
+      .marquee-track{justify-content:flex-start;gap:22px;font-size:10px}
+      .marquee-track span{gap:22px}
+      .intro,.gallery-section{padding:75px 0}
+      .intro-grid{grid-template-columns:1fr;gap:35px}
+      .intro-visual{padding:0 25px 25px 0}
+      .intro-visual img{height:330px}
+      .intro-tag{left:-7px;bottom:38px}
+      .section-title{font-size:clamp(36px,10vw,52px)}
+      .menu-section{padding:75px 0}
+      .menu-head{display:block;margin-bottom:28px}
+      .menu-note{margin-top:14px}
+      .menu-grid{gap:12px}
+      .dish-card img{height:190px}
+      .feature{padding:70px 0}
+      .feature-grid{grid-template-columns:1fr;gap:35px}
+      .feature-art{min-height:270px}
+      .feature-art img{height:260px;width:85%}
+      .feature-label{top:20px}
+      .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 160px;gap:9px}
+      .gallery-grid .gallery-tall{grid-row:auto}
+      .gallery-grid .gallery-wide{grid-column:span 2}
+      .visit{padding:75px 0}
+      .visit-grid{grid-template-columns:1fr;gap:30px}
+      .map-frame{height:340px}
+      .social-section{padding:55px 0}
+      .social-inner{align-items:flex-start;flex-direction:column;gap:22px}
+      .social-link{width:46px;height:46px}
+      .footer{padding:50px 0 22px}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:32px 22px}
+      .footer-grid>div:first-child{grid-column:1/-1}
+      .footer-bottom{align-items:flex-start;flex-direction:column;gap:8px}
+    }
+    @media(max-width:390px){
+      .container{width:calc(100% - 28px)}
+      .brand{gap:7px}
+      .brand-name{max-width:105px;font-size:9px}
+      .nav-actions{gap:4px}
+      .language{font-size:10px;padding:7px 8px}
+      .menu-grid{grid-template-columns:1fr 1fr}
+      .dish-card img{height:150px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}
+      .reveal{opacity:1;transform:none}
+      .hero-gallo{animation:none}
+    }
+  </style>
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Loz Reyes Mexican Food & Grilled Chicken",
+    "image": "https://lozreyesmexicanfoodgrilledchicken.online/img/LosReyesMexFoodLOGO.png",
+    "@id": "https://lozreyesmexicanfoodgrilledchicken.online/#restaurant",
+    "url": "https://lozreyesmexicanfoodgrilledchicken.online/",
+    "telephone": "+17136659657",
+    "servesCuisine": "Mexican",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "8795 Antoine Dr #116",
+      "addressLocality": "Houston",
+      "addressRegion": "TX",
+      "postalCode": "77088",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday", "Monday", "Wednesday"],
+        "opens": "10:00",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Thursday",
+        "opens": "09:30",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Friday",
+        "opens": "09:30",
+        "closes": "23:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "23:00"
+      }
+    ],
+    "menu": "https://lozreyesmexicanfoodgrilledchicken.online/#menu",
+    "sameAs": [
+      "https://www.facebook.com/lozreyesmexicanfood",
+      "https://www.instagram.com/loz_reyes",
+      "https://www.tiktok.com/@loz.reyes.mexican"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <div class="topline"></div>
+
+  <header class="header">
+    <div class="container nav">
+      <a href="#" class="brand">
+        <img src="img/LosReyesMexFoodLOGO.png" alt="Loz Reyes Logo">
+        <div class="brand-name">
+          <span>Houston, TX</span>
+          Loz Reyes
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" data-i18n="nav_about">Nosotros</a>
+        <a href="#menu" data-i18n="nav_menu">Menú</a>
+        <a href="#gallery" data-i18n="nav_gallery">Galería</a>
+        <a href="#visit" data-i18n="nav_visit">Ubicación</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="language" id="langToggle" aria-label="Cambiar idioma">EN</button>
+        <a href="https://lozreyesmexicanfood.onlineordering.io/en/?locationId=1576901&orderMode=in_store_pickup" target="_blank" rel="noopener" class="order-button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+          <span data-i18n="order_online">Order Online</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menú móvil">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-photo"></div>
+      <div class="container hero-inner">
+        <div class="hero-content reveal">
+          <div class="hero-kicker" data-i18n="hero_kicker">Auténtico Sabor Mexicano en Houston</div>
+          <h1>Carne Asada & <em>Pollos al Carbón</em></h1>
+          <p class="hero-description" data-i18n="hero_desc">El auténtico sazón de la parrilla mexicana directo al carbón. Tradición, sabor y sazón inigualable.</p>
+          <a href="https://lozreyesmexicanfood.onlineordering.io/en/?locationId=1576901&orderMode=in_store_pickup" target="_blank" rel="noopener" class="order-button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+            <span data-i18n="order_online">Order Online</span>
+          </a>
+          <div class="hero-meta">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              8795 Antoine Dr #116, Houston, TX
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              713-665-9657
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-stamp">
+        <span>100%<small>Al Carbón</small></span>
+      </div>
+      <img src="img/gallo_sin_fondo.png" alt="Gallo Loz Reyes" class="hero-gallo">
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>CARNE ASADA AUTÉNTICA <i>✦</i> POLLOS ASADOS AL CARBÓN <i>✦</i> SABOR MEXICANO <i>✦</i> 8795 ANTOINE DR HOUSTON <i>✦</i> CARNE ASADA AUTÉNTICA <i>✦</i> POLLOS ASADOS AL CARBÓN <i>✦</i> SABOR MEXICANO <i>✦</i> 8795 ANTOINE DR HOUSTON</span>
+      </div>
+    </div>
+
+    <!-- INTRO -->
+    <section class="intro" id="about">
+      <div class="container intro-grid">
+        <div class="intro-visual reveal">
+          <img src="img/restaurant_por_dentro.jpg" alt="Interior de Loz Reyes">
+          <div class="intro-tag" data-i18n="tag_tradition">¡Sabor Tradicional!</div>
+        </div>
+        <div class="intro-copy reveal">
+          <div class="eyebrow" data-i18n="eyebrow_our_history">Nuestra Historia</div>
+          <h2 class="section-title" data-i18n="intro_title">Pasión por la parrilla y el buen comer</h2>
+          <p data-i18n="intro_p1">En Loz Reyes Mexican Food & Grilled Chicken nos especializamos en la auténtica carne asada y pollos auténticos asados al carbón, preparados con recetas tradicionales que transmiten el verdadero espíritu de México.</p>
+          <p data-i18n="intro_p2">Cada platillo es elaborado al momento con ingredientes frescos, salsas artesanales y ese toque ahumado inconfundible que hace que cada visita a nuestra casa en Houston se convierta en una gran experiencia.</p>
+          <div class="intro-signature" data-i18n="intro_sig">Tradición y Calidad Familiar</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU (Puro diseño visual de platillos sin textos ni divisiones) -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="menu-head reveal">
+          <div>
+            <div class="eyebrow" data-i18n="eyebrow_menu">Especialidades de la casa</div>
+            <h2 class="section-title" data-i18n="menu_title">Nuestro Menú</h2>
+          </div>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+          <div class="dish-card reveal">
+            <img src="img/dish1.jpg" alt="Platillo Loz Reyes" loading="lazy">
+          </div>
+          <div class="dish-card reveal">
+            <img src="img/dish2.jpg" alt="Platillo Loz Reyes" loading="lazy">
+          </div>
+          <div class="dish-card reveal">
+            <img src="img/dish3.jpg" alt="Platillo Loz Reyes" loading="lazy">
+          </div>
+          <div class="dish-card reveal">
+            <img src="img/dish4.jpg" alt="Platillo Loz Reyes" loading="lazy">
+          </div>
+          <div class="dish-card reveal">
+            <img src="img/dish5.jpg" alt="Platillo Loz Reyes" loading="lazy">
+          </div>
+          <div class="dish-card reveal">
+            <img src="img/dish6.jpg" alt="Platillo Loz Reyes" loading="lazy">
+          </div>
+          <div class="dish-card reveal">
+            <img src="img/dish7.jpg" alt="Platillo Loz Reyes" loading="lazy">
+          </div>
+          <div class="dish-card reveal">
+            <img src="img/dish8.jpg" alt="Platillo Loz Reyes" loading="lazy">
+          </div>
+          <div class="dish-card reveal">
+            <img src="img/dish9.jpg" alt="Platillo Loz Reyes" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FEATURE BANNER -->
+    <section class="feature">
+      <div class="container feature-grid">
+        <div class="feature-copy reveal">
+          <div class="eyebrow" data-i18n="feat_eyebrow">100% Al Carbón</div>
+          <h2 data-i18n="feat_title">El auténtico sabor que nos distingue</h2>
+          <p data-i18n="feat_desc">Nuestro proceso de cocción lenta sobre brasas de carbón realza los jugos naturales de cada corte de carne y pollo, logrando un aroma y sabor inconfundible.</p>
+          <a href="https://lozreyesmexicanfood.onlineordering.io/en/?locationId=1576901&orderMode=in_store_pickup" target="_blank" rel="noopener" class="order-button" style="background:var(--ink);margin-top:20px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+            <span data-i18n="order_online">Order Online</span>
+          </a>
+        </div>
+        <div class="feature-art reveal">
+          <div class="feature-label" data-i18n="feat_badge">¡Parrilla Caliente!</div>
+          <img src="img/dish10.jpg" alt="Parrilla Loz Reyes" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+        <div class="gallery-head reveal">
+          <div class="eyebrow" data-i18n="gal_eyebrow">Galería Fotográfica</div>
+          <h2 class="section-title" data-i18n="gal_title">Conoce nuestra cocina y ambiente</h2>
+          <p class="section-copy" data-i18n="gal_desc">Un vistazo al corazón de Loz Reyes Mexican Food & Grilled Chicken.</p>
+        </div>
+
+        <div class="gallery-grid reveal">
+          <img src="img/dish11.jpg" alt="Platillo destacado" class="gallery-tall" loading="lazy">
+          <img src="img/fachada_por_fuera.jpg" alt="Fachada exterior" loading="lazy">
+          <img src="img/dish9.jpg" alt="Especialidad" loading="lazy">
+          <img src="img/restaurant_por_dentro.jpg" alt="Salón interior" class="gallery-wide" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIT / LOCATION & HOURS -->
+    <section class="visit" id="visit">
+      <div class="container visit-grid">
+        <div class="visit-info reveal">
+          <div class="eyebrow" data-i18n="visit_eyebrow">Visítanos en Houston</div>
+          <h2 class="section-title" data-i18n="visit_title">Horarios y Ubicación</h2>
+          <p class="section-copy" data-i18n="visit_desc">Ven a disfrutar en familia o pide en línea para recoger.</p>
+
+          <div class="info-block">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h3 data-i18n="lbl_address">Dirección</h3>
+              <p>8795 Antoine Dr #116, Houston, TX 77088</p>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h3 data-i18n="lbl_phone">Teléfono de Pedidos</h3>
+              <p><a href="tel:7136659657" style="font-weight:700;color:var(--red);">713-665-9657</a></p>
+            </div>
+          </div>
+
+          <div class="info-block" style="border-bottom:0;">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div>
+              <h3 data-i18n="lbl_hours">Horarios</h3>
+              <div class="hours" style="margin-top:8px;">
+                <span data-i18n="day_dom">Domingo</span><strong>10:00 AM – 10:00 PM</strong>
+                <span data-i18n="day_lun">Lunes</span><strong>10:00 AM – 10:00 PM</strong>
+                <span data-i18n="day_mar">Martes</span><strong class="closed" data-i18n="status_closed">Cerrado</strong>
+                <span data-i18n="day_mie">Miércoles</span><strong>10:00 AM – 10:00 PM</strong>
+                <span data-i18n="day_jue">Jueves</span><strong>9:30 AM – 10:00 PM</strong>
+                <span data-i18n="day_vie">Viernes</span><strong>9:30 AM – 11:00 PM</strong>
+                <span data-i18n="day_sab">Sábado</span><strong>9:00 AM – 11:00 PM</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-wrap reveal">
+          <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.98!2d-95.4807!3d29.8732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c5f2b8b9b8b9%3A0x1!2s8795%20Antoine%20Dr%20%23116%2C%20Houston%2C%20TX%2077088!5e0!3m2!1ses!2sus!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+          <div class="map-caption">
+            <div>
+              <strong>Loz Reyes Mexican Food</strong>
+              <div style="color:var(--muted);margin-top:2px;">8795 Antoine Dr #116, Houston, TX 77088</div>
+            </div>
+            <a href="https://maps.google.com/?q=8795+Antoine+Dr+#116,+Houston,+TX+77088" target="_blank" rel="noopener" class="order-button" style="padding:10px 14px;font-size:10px;" data-i18n="btn_directions">Cómo Llegar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL -->
+    <section class="social-section">
+      <div class="container social-inner">
+        <div>
+          <div class="eyebrow" data-i18n="social_eyebrow">Síguenos en Redes</div>
+          <h2 data-i18n="social_title">¡Comparte tu antojo con nosotros!</h2>
+        </div>
+        <div class="social-links">
+          <a href="https://www.facebook.com/lozreyesmexicanfood" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/loz_reyes" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@loz.reyes.mexican" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">
+            <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="img/LosReyesMexFoodLOGO.png" alt="Loz Reyes Logo">
+            <strong>Loz Reyes Mexican Food & Grilled Chicken</strong>
+          </div>
+          <p data-i18n="footer_desc">Auténtica carne asada y pollos asados al carbón en Houston, TX. Tradición, sabor y calidad en cada platillo.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/lozreyesmexicanfood" target="_blank" rel="noopener">Facebook</a> / 
+            <a href="https://www.instagram.com/loz_reyes" target="_blank" rel="noopener">Instagram</a> / 
+            <a href="https://www.tiktok.com/@loz.reyes.mexican" target="_blank" rel="noopener">TikTok</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 data-i18n="footer_links_title">Navegación</h3>
+          <div class="footer-links">
+            <a href="#about" data-i18n="nav_about">Nosotros</a>
+            <a href="#menu" data-i18n="nav_menu">Menú</a>
+            <a href="#gallery" data-i18n="nav_gallery">Galería</a>
+            <a href="#visit" data-i18n="nav_visit">Ubicación</a>
+            <a href="https://lozreyesmexicanfood.onlineordering.io/en/?locationId=1576901&orderMode=in_store_pickup" target="_blank" rel="noopener" data-i18n="order_online">Order Online</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 data-i18n="footer_contact_title">Contacto Directo</h3>
+          <div class="footer-links">
+            <span>8795 Antoine Dr #116</span>
+            <span>Houston, TX 77088</span>
+            <a href="tel:7136659657" style="color:var(--yellow);font-weight:700;">Tel: 713-665-9657</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div id="dynamicFooterCopyright"></div>
+        <div>
+          <a href="#" data-i18n="privacy_policy">Política de Privacidad</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Dynamic Menutech Footer Copyright Script
+    const currentYear = new Date().getFullYear();
+    const footerEl = document.getElementById('dynamicFooterCopyright');
+    if (footerEl) {
+      footerEl.innerHTML = `&copy; 2015 - ${currentYear} Powered by <a href="https://menutech.xyz" target="_blank" rel="noopener">Menutech</a>. Todos los derechos reservados.`;
+    }
+
+    // Mobile Navigation Toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (mobileToggle && navLinks) {
+      mobileToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        document.body.classList.toggle('menu-open');
+      });
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          document.body.classList.remove('menu-open');
+        });
+      });
+    }
+
+    // Scroll Reveal Observer
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Native Bilingual Translation System (ES / EN)
+    const translations = {
+      es: {
+        nav_about: "Nosotros",
+        nav_menu: "Menú",
+        nav_gallery: "Galería",
+        nav_visit: "Ubicación",
+        order_online: "Order Online",
+        hero_kicker: "Auténtico Sabor Mexicano en Houston",
+        hero_desc: "El auténtico sazón de la parrilla mexicana directo al carbón. Tradición, sabor y sazón inigualable.",
+        tag_tradition: "¡Sabor Tradicional!",
+        eyebrow_our_history: "Nuestra Historia",
+        intro_title: "Pasión por la parrilla y el buen comer",
+        intro_p1: "En Loz Reyes Mexican Food & Grilled Chicken nos especializamos en la auténtica carne asada y pollos auténticos asados al carbón, preparados con recetas tradicionales que transmiten el verdadero espíritu de México.",
+        intro_p2: "Cada platillo es elaborado al momento con ingredientes frescos, salsas artesanales y ese toque ahumado inconfundible que hace que cada visita a nuestra casa en Houston se convierta en una gran experiencia.",
+        intro_sig: "Tradición y Calidad Familiar",
+        eyebrow_menu: "Especialidades de la casa",
+        menu_title: "Nuestro Menú",
+        feat_eyebrow: "100% Al Carbón",
+        feat_title: "El auténtico sabor que nos distingue",
+        feat_desc: "Nuestro proceso de cocción lenta sobre brasas de carbón realza los jugos naturales de cada corte de carne y pollo, logrando un aroma y sabor inconfundible.",
+        feat_badge: "¡Parrilla Caliente!",
+        gal_eyebrow: "Galería Fotográfica",
+        gal_title: "Conoce nuestra cocina y ambiente",
+        gal_desc: "Un vistazo al corazón de Loz Reyes Mexican Food & Grilled Chicken.",
+        visit_eyebrow: "Visítanos en Houston",
+        visit_title: "Horarios y Ubicación",
+        visit_desc: "Ven a disfrutar en familia o pide en línea para recoger.",
+        lbl_address: "Dirección",
+        lbl_phone: "Teléfono de Pedidos",
+        lbl_hours: "Horarios",
+        day_dom: "Domingo",
+        day_lun: "Lunes",
+        day_mar: "Martes",
+        day_mie: "Miércoles",
+        day_jue: "Jueves",
+        day_vie: "Viernes",
+        day_sab: "Sábado",
+        status_closed: "Cerrado",
+        btn_directions: "Cómo Llegar",
+        social_eyebrow: "Síguenos en Redes",
+        social_title: "¡Comparte tu antojo con nosotros!",
+        footer_desc: "Auténtica carne asada y pollos asados al carbón en Houston, TX. Tradición, sabor y calidad en cada platillo.",
+        footer_links_title: "Navegación",
+        footer_contact_title: "Contacto Directo",
+        privacy_policy: "Política de Privacidad"
+      },
+      en: {
+        nav_about: "About Us",
+        nav_menu: "Menu",
+        nav_gallery: "Gallery",
+        nav_visit: "Location",
+        order_online: "Order Online",
+        hero_kicker: "Authentic Mexican Flavor in Houston",
+        hero_desc: "The true taste of the Mexican grill straight over charcoal. Tradition, flavor, and unmatched seasoning.",
+        tag_tradition: "Traditional Taste!",
+        eyebrow_our_history: "Our Story",
+        intro_title: "Passion for the grill & great food",
+        intro_p1: "At Loz Reyes Mexican Food & Grilled Chicken, we specialize in authentic carne asada and charcoal-grilled chicken, prepared with traditional recipes that convey the true spirit of Mexico.",
+        intro_p2: "Every dish is made fresh to order with quality ingredients, handcrafted salsas, and that unmistakable smoky touch that makes every visit to our Houston home a great experience.",
+        intro_sig: "Family Tradition & Quality",
+        eyebrow_menu: "House Specialties",
+        menu_title: "Our Menu",
+        feat_eyebrow: "100% Charcoal Grilled",
+        feat_title: "The authentic flavor that sets us apart",
+        feat_desc: "Our slow-cooking process over charcoal embers enhances the natural juices of every cut of meat and chicken, achieving an unmistakable aroma and taste.",
+        feat_badge: "Hot Grill!",
+        gal_eyebrow: "Photo Gallery",
+        gal_title: "Explore our kitchen & atmosphere",
+        gal_desc: "A peek inside the heart of Loz Reyes Mexican Food & Grilled Chicken.",
+        visit_eyebrow: "Visit Us in Houston",
+        visit_title: "Hours & Location",
+        visit_desc: "Come enjoy with family or order online for pickup.",
+        lbl_address: "Address",
+        lbl_phone: "Order Phone",
+        lbl_hours: "Hours",
+        day_dom: "Sunday",
+        day_lun: "Monday",
+        day_mar: "Tuesday",
+        day_mie: "Wednesday",
+        day_jue: "Thursday",
+        day_vie: "Friday",
+        day_sab: "Saturday",
+        status_closed: "Closed",
+        btn_directions: "Get Directions",
+        social_eyebrow: "Follow Us",
+        social_title: "Share your cravings with us!",
+        footer_desc: "Authentic carne asada and charcoal-grilled chicken in Houston, TX. Tradition, flavor, and quality in every dish.",
+        footer_links_title: "Navigation",
+        footer_contact_title: "Direct Contact",
+        privacy_policy: "Privacy Policy"
+      }
+    };
+
+    let currentLang = 'es';
+    const langToggleBtn = document.getElementById('langToggle');
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      langToggleBtn.textContent = (lang === 'es') ? 'EN' : 'ES';
+      document.documentElement.setAttribute('lang', lang);
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+
+    langToggleBtn.addEventListener('click', () => {
+      setLanguage(currentLang === 'es' ? 'en' : 'es');
+    });
+  </script>
+</body>
+</html>
