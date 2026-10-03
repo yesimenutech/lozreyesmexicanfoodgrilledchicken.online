@@ -70,17 +70,34 @@
     
     .hero{position:relative;min-height:660px;display:grid;align-items:center;overflow:hidden;background:#f3e7c9}
     .hero-photo {
-  position: absolute;
-  inset: 0 0 0 43%;
-  background: url("img/fachada_por_fuera.jpg") center/cover no-repeat;
-}
+      position: absolute;
+      inset: 0 0 0 43%;
+      background: url("img/fachada_por_fuera.jpg") center/cover no-repeat;
+    }
     .hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#f3e7c9 0%,rgba(243,231,201,.4) 20%,transparent 55%),linear-gradient(0deg,rgba(35,24,12,.16),transparent 45%)}
     .hero-inner{position:relative;z-index:1;padding:80px 0 95px}
     .hero-content{max-width:600px}
     .hero-kicker{display:flex;align-items:center;gap:12px;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--green)}
     .hero-kicker:before{content:"";width:35px;height:2px;background:var(--green)}
-    .hero h1{font-family:var(--display);font-weight:400;font-size:clamp(43px,6vw,82px);line-height:1.05;letter-spacing:-.045em;margin:24px 0 20px;max-width:620px}
-    .hero h1 em{font-style:normal;color:var(--red)}
+    
+    /* Configuración de tipografía y colores para el H1 del Hero */
+    .hero h1{
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(43px,6vw,82px);
+      line-height: 1.05;
+      letter-spacing: -.045em;
+      margin: 24px 0 20px;
+      max-width: 620px;
+    }
+    .hero h1 .hero-part1{
+      color: #a40014;
+    }
+    .hero h1 em{
+      font-style: normal;
+      color: #ffd809;
+    }
+
     .hero-description{font-size:16px;color:#554d40;max-width:410px;margin:0 0 30px}
     .hero-meta{display:flex;gap:24px;align-items:center;margin-top:34px;font-size:11px;font-weight:700;color:#5d5549}
     .hero-meta span{display:flex;align-items:center;gap:8px}
@@ -364,7 +381,7 @@
       <div class="container hero-inner">
         <div class="hero-content reveal">
           <div class="hero-kicker" data-i18n="hero_kicker">Auténtico Sabor Mexicano en Houston</div>
-          <h1>Carne Asada & <em>Pollos al Carbón</em></h1>
+          <h1><span class="hero-part1">Carne Asada &</span> <em>Pollos al Carbón</em></h1>
           <p class="hero-description" data-i18n="hero_desc">El auténtico sazón de la parrilla mexicana directo al carbón. Tradición, sabor y sazón inigualable.</p>
           <a href="https://lozreyesmexicanfood.onlineordering.io/en/?locationId=1576901&orderMode=in_store_pickup" target="_blank" rel="noopener" class="order-button">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
